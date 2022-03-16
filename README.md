@@ -5,11 +5,15 @@
 
 
 -- 1. Find all Products in the product category “Accessories”
-Select *
-From [Production].[Product] p
-LEFT JOIN [Production].[ProductCategory] c
-ON p.ProductSubcategoryID = c.ProductCategoryID
-WHERE c.Name = 'Accessories'
+Select	p.ProductID,
+		p.Name,
+		pc.ProductCategoryID,
+		pc.Name
+From [Production].[ProductCategory] pc
+JOIN [Production].[ProductSubcategory] ps ON pc.ProductCategoryID = ps.ProductCategoryID
+JOIN [Production].[Product] p ON ps.ProductSubcategoryID = p.ProductSubcategoryID
+WHERE pc.Name = 'Accessories'
+
 
 
 --2. Find all Products that have “seat” in its name
