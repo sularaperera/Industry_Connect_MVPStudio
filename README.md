@@ -1,8 +1,8 @@
 # MVPStudio_IC
 
+-- Link to the AdventureWorks2014 database : https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak
 
 -- Use AdventureWorks2014
-
 
 -- 1. Find all Products in the product category “Accessories”
 
